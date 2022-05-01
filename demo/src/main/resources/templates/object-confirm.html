@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	
+	<title>Object Confirm</title>
+</head>
+
+<body>
+    <h1>object</h1>
+	<label>Name</label>
+	<p type="text" name="name" id="name" th:text="${userForm.name}"></p>
+	<label>Email</label>
+	<p type="email" name="email" id="email" th:text="${userForm.email}"></p>
+	<label>Password</label>
+	<p type="password" name="password" id="password" th:text="${userForm.password}"></p>
+	
+	
+</body>
+
+</html>

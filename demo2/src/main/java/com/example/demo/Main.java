@@ -1,0 +1,58 @@
+package com.example.demo;
+
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import lombok.extern.slf4j.Slf4j;
+
+	@Controller
+	@Slf4j
+	public class Main {
+
+	    @Autowired
+	    private LoginService service;
+
+		
+	    @GetMapping("/user")
+	    public String hello(Model model) {
+	        return "user";
+	    }
+	    
+	    @RequestMapping("/regi")
+	    public String defectDetails() {
+	        return "regi";
+	    }
+	    
+	    
+	    
+	    
+	    @PostMapping("/logined")
+	    public String loginCheck(Input request,Model model) {
+	    	
+	    	service.checklogin(request,model);
+	    
+	    	
+	    	return "hello2";
+	    	
+	    }
+	    
+	    
+	    
+	    }
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

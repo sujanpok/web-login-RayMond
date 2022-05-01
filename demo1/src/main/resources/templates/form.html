@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Submission of form</title>
+</head>
+<body>
+    <form method="post" action="/submit">
+       <table>
+           <tr>
+               <td>User name:</td>
+               <td><input type="text" id="name" name="name" value="" /></td>
+           </tr>
+           <tr>
+               <td>Choose a car:</td>
+               <td><select id="sele" name="sele">
+                      
+ 
+    <option value="volvo">Volvo</option>
+    <option value="saab">Saab</option>
+    <option value="fiat">Fiat</option>
+    <option value="audi">Audi</option>
+  </select>
+   <hr>
+           </tr>
+           <tr>
+               <td>Favorite colors:</td>
+               <td>
+                   <span>
+                       <input type="checkbox"  value="red" id="myColors1" name="myColors" /><input type="hidden" name="_myColors" value="on"/>
+                       <label for="myColors1">red</label>
+                   </span><span>
+                       <input type="checkbox"  value="white" id="myColors2" name="myColors"/><input type="hidden" name="_myColors" value="on"/>
+                       <label for="myColors2">white</label>
+                   </span><span>
+                       <input type="checkbox"  value="black" id="myColors3" name="myColors" /><input type="hidden" name="_myColors" value="on"/>
+                       <label for="myColors3">black</label>
+                   </span><span>
+                       <input type="checkbox"  value="green" id="myColors4" name="myColors" /><input type="hidden" name="_myColors" value="on"/>
+                       <label for="myColors4">green</label>
+                   </span><span>
+                       <input type="checkbox"  value="blue" id="myColors5" name="myColors" /><input type="hidden" name="_myColors" value="on"/>
+                       <label for="myColors5">blue</label>
+                   </span>
+               </td>
+           </tr>
+           <tr>
+               <td colspan="2">
+                   <input type="submit" value="Submission" />
+               </td>
+           </tr>
+
+       </table>
+
+
+
+    </form>
+</body>
+</html>

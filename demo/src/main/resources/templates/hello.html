@@ -1,0 +1,29 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Hello Thymeleaf</title>
+    </head>
+    <body>
+   
+
+
+<h2>HTML Forms</h2>
+
+<form  action="@{/hello2}">
+  <label for="fname">ユーザー名:</label><br>
+  <input type="text" id="fname" name="fname" value="" th:field="*{fname}"><br>
+  <label for="lname">パスワード:</label><br>
+  <input type="password" id="lname" name="lname" value="" th:field="*{lname}"><br><br>
+  
+  
+  
+  <hr>
+  
+  
+  
+  <input type="submit" value="Submit">
+</form> 
+
+    </body>
+</html>

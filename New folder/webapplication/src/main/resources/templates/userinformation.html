@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>ユーザー情報一覧</title>
+<link href="/css/list.css" rel="stylesheet"></link>
+<meta charset="utf-8" />
+</head>
+<body>
+    <h1>ユーザー情報一覧</h1>
+    <div>
+        <a th:href="@{/newregister}">新規登録はこちら</a>
+    </div>
+     <div>
+        <a th:href="@{/userlogin}">ホームページ</a>
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <th>ユーザー名</th>
+                <th>パスワード</th>
+                <th>ID</th>
+                <th>名前</th>
+                <th>住所</th>
+                <th>電話番号</th>
+               
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="input : ${userinformation}" th:object="${input}">
+                <td class="center" th:text="*{username}"></td>
+                <td class="center" th:text="*{pwd}"></td>
+                <td class="center" th:text="*{id}"></td>
+                <td th:text="*{name}"></td>
+                <td th:text="*{address}"></td>
+                <td class="center" th:text="*{phone}"></td>
+                
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
