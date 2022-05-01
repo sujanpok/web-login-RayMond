@@ -22,8 +22,8 @@ public class LoginServiceImpl implements LoginService {
 			model.addAttribute("msg", msg);
 			return "userlogin";
 		} else {
-			msg = "OK";
-			model.addAttribute("userinfo", msg);
+			msg = "ようこそへ";
+			model.addAttribute("msg", msg);
 			return "login/home";
 		}
 
