@@ -23,7 +23,7 @@ public class LoginServiceImpl implements LoginService {
 			return "userlogin";
 		} else {
 			msg = "ようこそへ";
-			model.addAttribute("userinfo", msg);
+			model.addAttribute("msg", msg);
 			return "login/home";
 		}
 
