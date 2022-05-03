@@ -13,7 +13,7 @@ public class HomeController {
 		model.addAttribute("contents", "login/home :: home_contents");
 		return "login/home";
 	}
-//logout
+//logout hello
 	@PostMapping("/logout")
 	public String postLogout() {
 		return "redirect:/userlogin";
