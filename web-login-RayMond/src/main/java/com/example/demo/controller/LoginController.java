@@ -15,7 +15,7 @@ public class LoginController {
 	private LoginService service;
 
 //ログイン画面
-	@GetMapping("/userlogin")
+	@GetMapping("")
 	public String hello(Model model) {
 		return "userlogin";
 	}
@@ -27,4 +27,5 @@ public class LoginController {
 		return service.checklogin(request, model);
 
 	}
+
 }

@@ -9,7 +9,7 @@
 		select
 		count(username)
 		from
-		hello
+		login
 		where
 		username = #{user}
 		AND pwd = #{pwd}

@@ -17,5 +17,14 @@ public class HomeController {
 	@PostMapping("/logout")
 	public String postLogout() {
 		return "redirect:/userlogin";
+
+	
+	
+	
 	}
+	
+	
+	
+	
+	
 }
