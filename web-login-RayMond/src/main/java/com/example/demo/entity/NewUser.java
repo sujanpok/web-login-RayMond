@@ -12,20 +12,23 @@ import lombok.Data;
 @Data
 @Table(name = "user_register")
 public class NewUser {
-    @Id // ②
+   
+
+	@Id // ②
     @GeneratedValue(strategy = GenerationType.IDENTITY) // ③
-    private Long id;
+    private int id;
     private String name;
     private Integer age;
     private String team;
     private String position;
 
-    public Long getId() {
-        return id;
-    }
-    public void setId(Long id) {
-        this.id = id;
-    }
+    
+    public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
     public String getName() {
         return name;
     }

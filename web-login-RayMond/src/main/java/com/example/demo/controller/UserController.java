@@ -46,14 +46,14 @@ public class UserController {
 	
 	
 	@GetMapping("newUser/edit/{id}")
-    public String edit(@PathVariable Long id, Model model ) { // ⑤
+    public String edit(@PathVariable int id, Model model ) { // ⑤
 		Optional<NewUser> newUser = userService.findById(id);
         model.addAttribute("newUser", newUser);
         return "newRegister/edit";
     }
 	//show
 	 @GetMapping("ok/{id}")
-	 public String show(@PathVariable Long id,NewUser newUser, Model model ) { // ⑤
+	 public String show(@PathVariable int id,NewUser newUser, Model model ) { // ⑤
 			Optional<NewUser> register = userService.findById(id);
 	        model.addAttribute("newUser", register);
 	        return "newRegister/show";
@@ -61,7 +61,7 @@ public class UserController {
 	
 	//update
 	@PutMapping("{id}")
-    public String update(@PathVariable Long id, @ModelAttribute NewUser newUser) {
+    public String update(@PathVariable int id, @ModelAttribute NewUser newUser) {
 		newUser.setId(id);
         userService.save(newUser);
         return "redirect:/new"; // ⑦
@@ -69,7 +69,7 @@ public class UserController {
 	
 	//delet
 	 @DeleteMapping("{id}")
-	    public String destroy(@PathVariable Long id) {
+	    public String destroy(@PathVariable int id) {
 		 userService.delete(id);
 		return "redirect:./newRegister"; // ⑦
     }
