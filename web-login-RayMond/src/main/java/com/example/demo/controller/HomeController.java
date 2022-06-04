@@ -13,9 +13,18 @@ public class HomeController {
 		model.addAttribute("contents", "login/home :: home_contents");
 		return "login/home";
 	}
-//logout hello
+//logout 
 	@PostMapping("/logout")
 	public String postLogout() {
 		return "redirect:/userlogin";
+
+	
+	
+	
 	}
+	
+	
+	
+	
+	
 }
